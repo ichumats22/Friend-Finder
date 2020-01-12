@@ -10,13 +10,11 @@ module.exports = function(app) {
   app.post('/api/friends', function(req, res) {
     newUser = req.body;
 
-    for(answer in req.q){
-      newUser.answers.push(req.q[answer]);
-    }
+    var match = findMatch(newUser, friends);
 
     addToFriends(newUser, friends);
 
-    res.send(newUser);
+    res.send(match);
   });
 
   function addToFriends(newUser, friends) {
@@ -29,6 +27,23 @@ module.exports = function(app) {
         console.log(err);
       }
     });
-    
+  };
+
+  function findMatch(newFriend, friends){
+    var scoreComparison = 100;
+    var closestMatch;
+    friends.forEach(friend => {
+      var currentScore = 0;
+      for (i = 0; i < friend.scores.length; i++) {
+        currentScore += (Math.abs(parseInt(friend.scores[i]) - parseInt(newFriend.scores[i])));
+      }
+      console.log('Current Score: ' + currentScore);
+      if(currentScore < scoreComparison){
+          scoreComparison = currentScore;
+          closestMatch = friend;
+      }
+    });
+
+    return closestMatch;
   }
 }
