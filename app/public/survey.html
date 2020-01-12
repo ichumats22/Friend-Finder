@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+    <!--Font Awesome CDN-->
+    <script src='https://kit.fontawesome.com/bf3fcc460f.js' crossorigin='anonymous'></script>
+    <!--Bootstrap CDN-->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>
+
+    <!--Chosen-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css'>
+    <title>Friend Finder - Survey</title>
+  </head>
+
+  <body>
+    <div class='container'>
+      <h1 style='text-align: center;'>Friend Finder Survey</h1>
+      <hr class='my-4'>
+      <h3>Name (required)</h3>
+      <input type='text' id='name' class='form-control' required>
+      <h3>Link to Photo Image (required)</h3>
+      <input type='text' id='photo' class='form-control' required>
+
+      <h2><strong>Question #1</strong></h2>
+      <h3>QUESTION TEXT</h3>
+      <select class='chosen-select' id='q1'>
+        <option value></option>
+        <option value='1'>1 (Strongly Disagree)</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5 (Strongly Agree)</option>
+      </select>
+
+      <h2><strong>Question #2</strong></h2>
+      <h3>QUESTION TEXT</h3>
+      <select class='chosen-select' id='q2'>
+        <option value></option>
+        <option value='1'>1 (Strongly Disagree)</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5 (Strongly Agree)</option>
+      </select>
+
+      <h2><strong>Question #3</strong></h2>
+      <h3>QUESTION TEXT</h3>
+      <select class='chosen-select' id='q3'>
+        <option value></option>
+        <option value='1'>1 (Strongly Disagree)</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5 (Strongly Agree)</option>
+      </select>
+
+      <h2><strong>Question #4</strong></h2>
+      <h3>QUESTION TEXT</h3>
+      <select class='chosen-select' id='q4'>
+        <option value></option>
+        <option value='1'>1 (Strongly Disagree)</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5 (Strongly Agree)</option>
+      </select>
+
+      <h2><strong>Question #5</strong></h2>
+      <h3>QUESTION TEXT</h3>
+      <select class='chosen-select' id='q5'>
+        <option value></option>
+        <option value='1'>1 (Strongly Disagree)</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5 (Strongly Agree)</option>
+      </select>
+
+      <h2><strong>Question #6</strong></h2>
+      <h3>QUESTION TEXT</h3>
+      <select class='chosen-select' id='q6'>
+        <option value></option>
+        <option value='1'>1 (Strongly Disagree)</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5 (Strongly Agree)</option>
+      </select>
+
+      <h2><strong>Question #7</strong></h2>
+      <h3>QUESTION TEXT</h3>
+      <select class='chosen-select' id='q7'>
+        <option value></option>
+        <option value='1'>1 (Strongly Disagree)</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5 (Strongly Agree)</option>
+      </select>
+
+      <h2><strong>Question #8</strong></h2>
+      <h3>QUESTION TEXT</h3>
+      <select class='chosen-select' id='q8'>
+        <option value></option>
+        <option value='1'>1 (Strongly Disagree)</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5 (Strongly Agree)</option>
+      </select>
+
+      <h2><strong>Question #9</strong></h2>
+      <h3>QUESTION TEXT</h3>
+      <select class='chosen-select' id='q9'>
+        <option value></option>
+        <option value='1'>1 (Strongly Disagree)</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5 (Strongly Agree)</option>
+      </select>
+
+      <h2><strong>Question #10</strong></h2>
+      <h3>QUESTION TEXT</h3>
+      <select class='chosen-select' id='q10'>
+        <option value></option>
+        <option value='1'>1 (Strongly Disagree)</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5 (Strongly Agree)</option>
+      </select>
+
+      <br>
+      <br>
+      <!--Submit Button-->
+      <button type='submit' class='btn btn-primary btn-large' id='submit'>
+        <i class='fas fa-check-square'></i>Submit
+      </button>
+    </div><!--end of container div-->
+    
+    <div id='results-modal' class='modal fade' role='dialog'>
+      <div class='modal-dialog'>
+        <div class='modal-content'>
+          <div class='modal-header'>
+            <button type='button' class='close' data-dismiss='modal'>*</button>
+            <h2 class='modal-title'><strong>Best Match</strong></h2>
+          </div><!--end of modal header div-->
+          <div class='modal-body'>
+            <h2 id='match-name'></h2>
+            <img id='match-img' alt='Match Photo'>
+          </div><!--end of modal body div-->
+          <div class='modal-footer'>
+            <button type='button' class='btn btn-primary btn-lg' data-dismiss='modal'>Close</button>
+          </div><!--end of modal footer div-->
+        </div><!--end of modal content div-->
+      </div><!--end of modal-dialog div-->
+    </div><!--end of container div-->
+    
+    <!--jQuery-->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+    <!--Chosen-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+    
+    <!--Bootstrap JS-->
+    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous'></script>
+
+    <script type='text/javascript'>
+      var config = {
+        '.chosen-select': {},
+        '.chosen-select-deselect': {
+          allow_single_deselect: true
+        },
+        '.chosen-select-no-single': {
+          disable_search_threshold: 10
+        },
+        '.chosen-select-no-results': {
+          no_results_text: 'Oops, nothing found!'
+        },
+        '.chosen-select-width': {
+          width: '95%'
+        }
+      };
+
+      for (var selector in config) {
+        $(selector).chosen(config[selector]);
+      }
+
+      // Capture inputs
+      $('#submit').on('click', function(event) {
+        event.preventDefault();
+        //Validation
+        function validateForm() {
+          var isValid = true;
+          $('.form-control').each(function() {
+            if($(this).val() === '') {
+              isValid = false;
+            }
+          });
+
+          $('.chosen-select').each(function() {
+            if ($(this).val() === '') {
+              isValid = false;
+            }
+          });
+          return isValid;
+        }
+
+        //If form inputs are valid...
+        if (validateForm()) {
+          // Create an object of user data
+          var userData = {
+            name: $('#name').val(),
+            photos: $('#photo').val(),
+            scores: [
+              $('#q1').val(),
+              $('#q2').val(),
+              $('#q3').val(),
+              $('#q4').val(),
+              $('#q5').val(),
+              $('#q6').val(),
+              $('#q7').val(),
+              $('#q8').val(),
+              $('#q9').val(),
+              $('#q10').val(),
+            ]
+          };
+
+          // Post data to friends API
+          $.post('api/friends', userData)
+           .then(function(data) {
+            console.log(data);
+            //Grab the result from the AJAX post so that the best match's name and photo are displayed
+            //$('#match-name').text(data.name);
+            //$('#match-img').attr('src', data.photo);
+
+            // Display the best match in the modal
+            //$('#results-modal').modal('toggle');
+          });
+        } else {
+          alert('Please complete all required fields before submitting!');
+        }
+      });
+    </script>
+  </body>
+</html>
