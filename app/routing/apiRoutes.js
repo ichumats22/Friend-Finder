@@ -1,4 +1,5 @@
 var friends = require('../data/friends');
+var fs = require('fs')
 
 // Routes =========================================================
 module.exports = function(app) {
@@ -7,12 +8,27 @@ module.exports = function(app) {
   });
 
   app.post('/api/friends', function(req, res) {
-    var newUser = req.body;
+    newUser = req.body;
 
-    console.log(newUser);
+    for(answer in req.q){
+      newUser.answers.push(req.q[answer]);
+    }
 
-    friends.push(newUser);
-    
+    addToFriends(newUser, friends);
+
     res.send(newUser);
   });
+
+  function addToFriends(newUser, friends) {
+    friends.push(newUser);
+
+    var data = 'var friends = ' + JSON.stringify(friends, null, 2) + '\n module.exports = friends'
+
+    fs.writeFile('app/data/friends.js', data, function(err) {
+      if(err){
+        console.log(err);
+      }
+    });
+    
+  }
 }
